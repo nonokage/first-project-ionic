@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h4>
+    Test
+  </h4>
+
+  <p>
+      <button ion-button outline color="dark"
+      (click)="findCard()">Card celebrity</button>
+  </p>
+
+  <h4>
+    Liste de cards
+  </h4>
+
+  <ion-list inset>
+      <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+        {{ item }}
+      </button> 
+  </ion-list>
+
+  <h4>
+    Formulaire
+  </h4>
+
+  <p>
+    Formulaire de création de personnages pour JDR
+  </p>
+
+  <p>
+    <button ion-button outline color="secondary"
+    [navPush]='nextPage'>Form</button>
+</p>
+
+</ion-content>
